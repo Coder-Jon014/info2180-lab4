@@ -1,3 +1,59 @@
-.result {
-  background-color: red;
-}/*# sourceMappingURL=style.css.map */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  background-color: white;
+  margin: 2em;
+}
+
+.container header {
+  background-color: #31559a;
+  text-align: center;
+}
+
+.container header h1 {
+  padding: 2em;
+  height: 20%;
+  color: white;
+}
+
+.container section {
+  background-color: #6cc2ff;
+  margin-top: -1.5em;
+  padding-left: 15em;
+  padding-bottom: 30em;
+  padding-top: 2em;
+  height: 80%;
+}
+
+.container section .search #searchBar {
+  padding-right: 50em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 0.9em;
+}
+
+.container section .search #searchButton {
+  padding-right: 4em;
+  padding-left: 4em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-radius: .5em;
+  color: #ef4e47;
+  background-color: #31559a;
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
+  font-size: .9em;
+}
+
+.container section .result {
+  display: inline-block;
+}
+
+.container section .result h3 {
+  font-size: 35px;
+}
+
+.container section .result #superheroes {
+  margin-right: 15em;
+}
+/*# sourceMappingURL=style.css.map */

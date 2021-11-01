@@ -1,5 +1,10 @@
 <?php
 
+ //give access to file(CORS policy)
+ header('Access-Control-Allow-Origin: *');
+ header('Access-Control-Allow-Methods: GET, POST');
+ header("Access-Control-Allow-Headers: X-Requested-With"); 
+
 $superheroes = [
   [
       "id" => 1,
@@ -63,10 +68,28 @@ $superheroes = [
   ], 
 ];
 
+$search = filter_input(INPUT_GET,'query',FILTER_SANITIZE_STRING);
+$found = false;
 ?>
 
 <ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
+<?php if ($search == ''):?>
+	<?php foreach ($superheroes as $superhero): ?>
+	  <li><?= $superhero['alias']; ?></li>
+	<?php endforeach; ?>
+	<?php else:?>
+		<?php foreach ($superheroes as $superhero):?>
+			<?php if ($search == $superhero['alias'] || $search == $superhero['name']):?>
+				<h3><?php echo $superhero['alias'];?></h3>
+				<h4><?php echo $superhero['name'];?></h4>
+				<p><?php echo $superhero ['biography'];?></p>
+				<?php $found = true;?>
+			<?php endif?>
+		<?php endforeach; ?>
+		
+		<?php if($found == false):?>
+			<p>Superhero Not Found</p>
+		<?php endif ?>
+		
+	<?php endif?>
 </ul>
