@@ -3,62 +3,69 @@ body{
     font-size: 18px;
     background-color: white;
     margin: 2em;
+
+
+    .container{
+        header{
+            background-color: #31559a;
+            text-align: center;
+    
+            h1{
+                padding: 2em;
+                height: 20%;
+                color: white;
+            }
+        }
+    
+        section{
+            background-color: #6cc2ff;
+            margin-top: -1.5em;
+            padding-left: 15em;
+            padding-bottom: 25em;
+            padding-top: 2em;
+            height:80%;
+    
+            .search{
+                #searchBar{
+                    // margin-top: -5em;
+                    padding-right: 50em;
+                    padding-top:1em;
+                    padding-bottom:1em;
+                    font-size: 0.9em;
+                }
+    
+                #searchButton{
+                    padding-right: 4em;
+                    padding-left: 4em;
+                    padding-top:1em;
+                    padding-bottom:1em;
+    
+                    border-radius: .5em;
+                    color: #ef4e47;
+                    background-color: #31559a;
+                    text-decoration: solid;
+                    font-size: .9em;
+                }
+            }
+    
+            .result{
+                display: inline-block;
+                h3{
+                    font-size: 35px;
+                }
+    
+                #superheroes {
+                    margin-right: 15em;
+                }
+            }
+    
+        }
+    }
 }
 
-
-.container{
-    header{
-        background-color: #31559a;
-        text-align: center;
-
-        h1{
-            padding: 2em;
-            height: 20%;
-            color: white;
-        }
-    }
-
-    section{
-        background-color: #6cc2ff;
-        margin-top: -1.5em;
-        padding-left: 15em;
-        padding-bottom: 30em;
-        padding-top: 2em;
-        height:80%;
-
-        .search{
-            #searchBar{
-                // margin-top: -5em;
-                padding-right: 50em;
-                padding-top:1em;
-                padding-bottom:1em;
-                font-size: 0.9em;
-            }
-
-            #searchButton{
-                padding-right: 4em;
-                padding-left: 4em;
-                padding-top:1em;
-                padding-bottom:1em;
-
-                border-radius: .5em;
-                color: #ef4e47;
-                background-color: #31559a;
-                text-decoration: solid;
-                font-size: .9em;
-            }
-        }
-
-        .result{
-            display: inline-block;
-            h3{
-                font-size: 35px;
-            }
-
-            #superheroes {
-                margin-right: 15em;
-            }
-        }
-
-    }
+footer{
+    background-color: #6cc2ff;
+    margin-top: -1.5em;
+    padding: 2em;
+    padding-left: 4em;
 }
